@@ -1,0 +1,14 @@
+# https://www.mongodb.com/blog/post/getting-started-with-python-and-mongodb
+import pymongo
+from pymongo import MongoClient
+import pandas as pd
+import ssl
+
+
+client = pymongo.MongoClient("mongodb+srv://angie:5OoZySALBusNjnef@portfolioadb.dn8gkkn.mongodb.net/?retryWrites=true&w=majority")
+
+db = client.database
+
+df=pd.read_csv("database.csv")
+
+db.database.insert_many(df.to_dict('email'))
