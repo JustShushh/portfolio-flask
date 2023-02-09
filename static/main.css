@@ -4683,7 +4683,7 @@ fieldset[disabled] .navbar-default .btn-link:hover {
 .navbar-inverse .navbar-nav>.active>a:hover,
 .navbar-inverse .navbar-nav>li>a:focus,
 .navbar-inverse .navbar-nav>li>a:hover {
-    color: #0f0;
+    color: rgb(255, 255, 255);
     background-color: transparent
 }
 
@@ -4709,7 +4709,7 @@ fieldset[disabled] .navbar-default .btn-link:hover {
 
 .navbar-inverse .navbar-collapse,
 .navbar-inverse .navbar-form {
-    border-color: transparent
+    border-color: #000000
 }
 
 .navbar-inverse .navbar-nav>.open>a,
@@ -5713,7 +5713,7 @@ body.minimal {
 .green-text-container h5,
 .green-text-container p {
     text-shadow: 0 1px 3px #000;
-    color: rgb(209, 104, 195)
+    color: rgb(255, 255, 255)
 }
 
 .green-text-container a {
