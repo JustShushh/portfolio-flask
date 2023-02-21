@@ -17,6 +17,10 @@ def homepage():
 def html_page(page_name):
     return render_template(page_name)
 
+#@app.route('/show_results', methods=['GET', 'POST'])
+#def show_results():
+#    client.datbase.email.find_one({mycol.email : 'email'})
+#    request.method = 'POST'
 
 @app.route('/submit_form', methods=['GET', 'POST'])
 def submit_form():
@@ -41,17 +45,14 @@ def write_to_csv(data):
 
 def write_to_email(data):
         email = data['email']
-        df=pd.read_csv("database.csv")
         client.database.email.insert_one( {email : 'email'} )
 
 def write_to_subject(data):
         subject = data['subject']
-        df=pd.read_csv("database.csv")
         client.database.subject.insert_one( {subject : 'subject'} )
   
 
 def write_to_message(data):
         message = data['message']
-        df=pd.read_csv("database.csv")
         client.database.message.insert_one( {message : 'message'} )
         
